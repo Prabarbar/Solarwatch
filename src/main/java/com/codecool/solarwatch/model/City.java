@@ -1,15 +1,18 @@
 package com.codecool.solarwatch.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
 public class City {
     @Id
-    private int id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int cityId;
     private String name;
-    private double latitude;
-    private double longitude;
+    private double lat;
+    private double lon;
     private String state;
     private String country;
 
@@ -17,12 +20,12 @@ public class City {
         return name;
     }
 
-    public double getLatitude() {
-        return latitude;
+    public double getLat() {
+        return lat;
     }
 
-    public double getLongitude() {
-        return longitude;
+    public double getLon() {
+        return lon;
     }
 
     public String getState() {
@@ -31,5 +34,15 @@ public class City {
 
     public String getCountry() {
         return country;
+    }
+
+
+    public City(){}
+    public City(String name, double lat, double lon, String state, String country) {
+        this.name = name;
+        this.lat = lat;
+        this.lon = lon;
+        this.state = state;
+        this.country = country;
     }
 }
