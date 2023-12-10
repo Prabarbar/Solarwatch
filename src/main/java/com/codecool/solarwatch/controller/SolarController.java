@@ -1,11 +1,10 @@
 package com.codecool.solarwatch.controller;
 
-import com.codecool.solarwatch.model.City;
-import com.codecool.solarwatch.model.SolarReportResults;
-import com.codecool.solarwatch.model.SunriseSunset;
-import com.codecool.solarwatch.repository.SunriseSunsetRepository;
-import com.codecool.solarwatch.service.CityService;
-import com.codecool.solarwatch.service.SunriseSunsetService;
+import com.codecool.solarwatch.city.model.City;
+import com.codecool.solarwatch.sunriseSunset.model.SunriseSunset;
+import com.codecool.solarwatch.city.service.CityService;
+import com.codecool.solarwatch.sunriseSunset.service.SunriseSunsetService;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,12 +17,14 @@ public class SolarController {
     private final SunriseSunsetService sunriseSunsetService;
     private final CityService cityService;
 
+
     public SolarController(SunriseSunsetService sunriseSunsetService, CityService cityService){
         this.sunriseSunsetService = sunriseSunsetService;
         this.cityService = cityService;
     }
 
     @GetMapping("/sun")
+    @PreAuthorize("hasRole('ADMIN')")
     public SunriseSunset getSunriseSunset(@RequestParam String cityName, @RequestParam LocalDate date) {
         City city = cityService.getCityFromDb(cityName);
         if (city == null){

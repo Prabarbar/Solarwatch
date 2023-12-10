@@ -1,10 +1,7 @@
-package com.codecool.solarwatch.model;
+package com.codecool.solarwatch.sunriseSunset.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.codecool.solarwatch.city.model.City;
 import jakarta.persistence.*;
-import org.hibernate.annotations.Cascade;
-import org.hibernate.annotations.OnDelete;
-import org.hibernate.annotations.OnDeleteAction;
 
 import java.time.LocalDate;
 
@@ -17,8 +14,11 @@ public class SunriseSunset {
     @ManyToOne
     @JoinColumn(name = "city_id")
     private City city;
+
     private LocalDate date;
+
     private String sunrise;
+
     private String sunset;
 
 

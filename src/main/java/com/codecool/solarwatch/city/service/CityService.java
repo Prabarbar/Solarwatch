@@ -1,7 +1,7 @@
-package com.codecool.solarwatch.service;
+package com.codecool.solarwatch.city.service;
 
-import com.codecool.solarwatch.model.City;
-import com.codecool.solarwatch.repository.CityRepository;
+import com.codecool.solarwatch.city.model.City;
+import com.codecool.solarwatch.city.repository.CityRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;

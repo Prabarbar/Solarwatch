@@ -1,8 +1,7 @@
-package com.codecool.solarwatch.repository;
+package com.codecool.solarwatch.sunriseSunset.repository;
 
-import com.codecool.solarwatch.model.SunriseSunset;
+import com.codecool.solarwatch.sunriseSunset.model.SunriseSunset;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 
 import java.time.LocalDate;
 import java.util.Optional;

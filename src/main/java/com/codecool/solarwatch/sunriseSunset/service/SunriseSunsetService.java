@@ -1,10 +1,9 @@
-package com.codecool.solarwatch.service;
+package com.codecool.solarwatch.sunriseSunset.service;
 
-import com.codecool.solarwatch.model.City;
-import com.codecool.solarwatch.model.SolarReport;
-import com.codecool.solarwatch.model.SolarReportResults;
-import com.codecool.solarwatch.model.SunriseSunset;
-import com.codecool.solarwatch.repository.SunriseSunsetRepository;
+import com.codecool.solarwatch.city.model.City;
+import com.codecool.solarwatch.sunriseSunset.model.SolarReport;
+import com.codecool.solarwatch.sunriseSunset.model.SunriseSunset;
+import com.codecool.solarwatch.sunriseSunset.repository.SunriseSunsetRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;

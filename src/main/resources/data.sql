@@ -1,0 +1,8 @@
+-- DELETE FROM users_roles WHERE users_user_id = 1
+-- DELETE FROM users WHERE user_id = 1
+-- DELETE FROM roles WHERE role_id = 1
+-- DELETE FROM roles WHERE role_id = 2
+--
+-- INSERT INTO roles (role_id, role_name) VALUES (1, 'ADMIN'), (2, 'USER')
+-- INSERT INTO users (user_id, username, password) VALUES (1, 'admin', 'pass')
+-- INSERT INTO users_roles (users_user_id, roles_role_id) VALUES (1, 1), (1, 2)

@@ -1,4 +1,4 @@
-package com.codecool.solarwatch.model;
+package com.codecool.solarwatch.sunriseSunset.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
