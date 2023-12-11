@@ -45,5 +45,12 @@ public class SunriseSunsetService {
     public void addSunriseSunset(City city, LocalDate date, String sunrise, String sunset){
         sunriseSunsetRepository.save(new SunriseSunset(city, date, sunrise, sunset));
     }
+
+    public void deleteSunriseSunset(String cityName, LocalDate date){
+        if(sunriseSunsetRepository.findByCityNameAndDate(cityName, date).isPresent()){
+            SunriseSunset sunriseSunset = sunriseSunsetRepository.findByCityNameAndDate(cityName, date).get();
+            sunriseSunsetRepository.delete(sunriseSunset);
+        }
+    }
 }
 

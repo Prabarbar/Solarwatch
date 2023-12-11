@@ -71,6 +71,8 @@ public class WebSecurityConfig {
 //                                .requestMatchers("/error").permitAll()
                                 .requestMatchers(("/sun")).permitAll()
 //                                .anyRequest().authenticated()
+                                .requestMatchers("/get").permitAll()
+                                .anyRequest().hasRole("ADMIN")
 
                 );
 
