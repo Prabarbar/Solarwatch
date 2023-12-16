@@ -44,7 +44,10 @@ public class UserController {
     public List<UserEntity> getUsers(){
         return userService.getAllUsers();
     }
+
+
     @PostMapping("/register")
+    @CrossOrigin(origins = "http://localhost:3000")
     public  ResponseEntity<String> createUser(@RequestBody RegisterUserRequest request){
         //sprawdzam, czy jest użytkownik: admin i role: ADMIN i USER, jeśli nie to dodaje je do DB.
         if(roleService.findRoleByName("ROLE_ADMIN") == null){
@@ -61,6 +64,7 @@ public class UserController {
     }
 
     @PostMapping("/login")
+    @CrossOrigin(origins = "http://localhost:3000")
     public ResponseEntity<?> authenticateUser(@RequestBody LoginUserRequest loginRequest) {
 
         Authentication authentication = authenticationManager.authenticate(
