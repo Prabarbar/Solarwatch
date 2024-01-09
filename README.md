@@ -7,7 +7,7 @@
 * [Authors](#authors)
 
 ## General Information
-Fitness and diet App.
+Application shows sunrise and sunset time in any city. 
 
 ## Technologies Used
 - Java
