@@ -65,10 +65,10 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2ZRZVfuOORm4HbBCTLnyPjqyH1Q" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
@@ -78,7 +78,10 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "development",
+    "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/codecool/m4/solo1_WebApplications/solar-watch-1-MVP-java-Prabarbar/server",
+    "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -91,6 +94,7 @@
       <option name="presentableId" value="Default" />
       <updated>1702386881891</updated>
       <workItem from="1702386884720" duration="35000" />
+      <workItem from="1704822731636" duration="16000" />
     </task>
     <servers />
   </component>

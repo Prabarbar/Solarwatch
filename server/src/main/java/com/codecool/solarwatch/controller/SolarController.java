@@ -45,6 +45,7 @@ public class SolarController {
 
     @GetMapping("/get")
     @PreAuthorize("hasRole('USER')")
+    @CrossOrigin(origins = "http://localhost:3000")
     public SunriseSunset getSunriseSunset(@RequestParam("city") String cityName, @RequestParam LocalDate date){
         return sunriseSunsetService.getSunriseSunsetFromDb(cityName, date);
     }

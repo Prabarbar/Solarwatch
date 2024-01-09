@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { useNavigate} from "react-router-dom";
 
-export default function Login(){
+export default function Login({setJwt, setUser}){
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -9,7 +9,7 @@ export default function Login(){
     const navigate = useNavigate()
 
 
-    async function handleSubmit(event){
+    async function handleLogin(event){
         event.preventDefault()
         const postRes = await fetch("http://localhost:8080/open-access/user/login",{
           method: 'POST',
@@ -18,7 +18,8 @@ export default function Login(){
         })
         const info = await postRes.json()
         console.log("Login completed!")
-        console.log(info)
+        setJwt(info.jwt)
+        setUser(info.userName)
       }
 
 
@@ -34,7 +35,7 @@ export default function Login(){
 
     return (
         <>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleLogin}>
             <h1>Login</h1>
             <div className="login">
                 <ul>
@@ -43,12 +44,12 @@ export default function Login(){
                 </ul>
                 <ul>
                     <label>Password</label>
-                    <input onChange={handlePassword} type="passowrd"/>
+                    <input onChange={handlePassword} type="password"/>
                 </ul>
             </div>
-            <button onClick={handleSubmit}>login</button>
+            <button type='submit'>login</button>
         </form>
-        <button onClick={()=>navigate(-1)}>Back</button>
+        <button onClick={()=>navigate("/")}>Back</button>
         </>
     )
 }

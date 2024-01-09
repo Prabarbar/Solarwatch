@@ -11,7 +11,6 @@ export default function Register(){
 
     function handleSubmit(event){
         event.preventDefault()
-        // setSubmitted(true)
         console.log("Registration completed!")
         fetch("http://localhost:8080/open-access/user/register",{
           method: 'POST',
@@ -47,7 +46,7 @@ export default function Register(){
             </div>
             <button onClick={handleSubmit}>Register</button>
         </form>
-        <button onClick={()=>navigate(-1)}>Back</button>
+        <button onClick={()=>navigate("/")}>Back</button>
         </>
     )
 }

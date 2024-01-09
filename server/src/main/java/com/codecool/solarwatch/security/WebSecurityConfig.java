@@ -72,6 +72,7 @@ public class WebSecurityConfig {
                                 .requestMatchers(("/sun")).permitAll()
 //                                .anyRequest().authenticated()
                                 .requestMatchers("/get").permitAll()
+//                                .requestMatchers("/solar-watch").permitAll()
                                 .anyRequest().hasRole("ADMIN")
 
                 );
