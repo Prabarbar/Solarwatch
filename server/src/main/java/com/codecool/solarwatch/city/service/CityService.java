@@ -11,7 +11,7 @@ import org.springframework.web.client.RestTemplate;
 @Service
 public class CityService {
 
-    private static final String API_KEY = "13a7b088b933337f7679ee595833f0ec";
+    private static final String API_KEY = "";
     private final RestTemplate restTemplate;
     private final CityRepository cityRepository;
     private static final Logger logger = LoggerFactory.getLogger(CityService.class);
